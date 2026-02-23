@@ -1,7 +1,5 @@
 import { ArrowUpRight, Instagram, Youtube } from 'lucide-react'
-import { motion } from 'motion/react'
 import Ballpit from '@/components/Ballpit'
-import BlurText from '@/components/BlurText'
 import DecayCard from '@/components/DecayCard'
 import Galaxy from '@/components/Galaxy'
 import GlitchText from '@/components/GlitchText'
