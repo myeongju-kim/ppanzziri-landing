@@ -8,8 +8,8 @@ import GlitchText from '@/components/GlitchText'
 import Magnet from '@/components/Magnet'
 import PrismaticBurst from '@/components/PrismaticBurst'
 import ShinyText from '@/components/ShinyText'
-import SplitText from '@/components/SplitText'
 import TextType from '@/components/TextType'
+import TrueFocus from '@/components/TrueFocus'
 
 const socialLinks = [
   {
@@ -62,31 +62,17 @@ function App() {
             </GlitchText>
 
             <div className="relative mt-7 space-y-3">
-              <motion.div
-                className="absolute -top-8 left-1/2 h-12 w-12 -translate-x-1/2 rounded-full border border-cyan-300/45"
-                animate={{ scale: [1, 1.35, 1], opacity: [0.9, 0.25, 0.9] }}
-                transition={{ duration: 2.2, repeat: Number.POSITIVE_INFINITY, ease: 'easeInOut' }}
-              />
-              <motion.div
-                className="absolute -top-2 left-1/2 h-[2px] w-72 -translate-x-1/2 overflow-hidden rounded-full bg-white/20"
-                initial={{ opacity: 0.45 }}
-                animate={{ opacity: [0.3, 0.9, 0.3] }}
-                transition={{ duration: 1.8, repeat: Number.POSITIVE_INFINITY, ease: 'easeInOut' }}
-              >
-                <motion.div
-                  className="h-full w-24 bg-cyan-300"
-                  animate={{ x: ['-30%', '140%'] }}
-                  transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, ease: 'linear' }}
-                />
-              </motion.div>
+             
               
-              <SplitText
-                tag="h1"
-                text="3000만원으로 뺀질거리기"
-                splitType="words, chars"
-                className="max-w-5xl text-4xl font-black leading-[1.04] tracking-tight text-white sm:text-6xl md:text-8xl"
-                from={{ opacity: 0, y: 56, rotateX: -22 }}
-                to={{ opacity: 1, y: 0, rotateX: 0 }}
+              <TrueFocus
+                sentence="3000만원으로 뺀질거리기"
+                manualMode={false}
+                blurAmount={5}
+                borderColor="#44f0cf"
+                glowColor="rgba(68, 240, 207, 0.6)"
+                animationDuration={1.2}
+                pauseBetweenAnimations={0.9}
+                wordClassName="!text-[clamp(1.9rem,6.6vw,4.9rem)] !font-black !tracking-tight !leading-[1.05] text-white"
               />
             </div>
 
@@ -131,18 +117,12 @@ function App() {
                 <TextType
                   as="h2"
                   text="뺀질이의 일상이 궁금하다면?"
-                  className="mt-3 text-3xl font-black leading-tight text-white sm:text-5xl"
+                  className="mt-3 whitespace-nowrap text-[clamp(1.6rem,4.8vw,3.3rem)] font-black leading-tight text-white"
                   typingSpeed={30}
                   deletingSpeed={20}
                   pauseDuration={3800}
                   showCursor={false}
                   loop={false}
-                />
-                <BlurText
-                  text="유튜브, 인스타에 접속해주세요."
-                  animateBy="words"
-                  delay={52}
-                  className="mt-4 max-w-xl text-slate-200"
                 />
               </div>
 
