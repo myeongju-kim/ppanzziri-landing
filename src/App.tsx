@@ -6,7 +6,6 @@ import GlitchText from '@/components/GlitchText'
 import Magnet from '@/components/Magnet'
 import PrismaticBurst from '@/components/PrismaticBurst'
 import ShinyText from '@/components/ShinyText'
-import TextType from '@/components/TextType'
 import TrueFocus from '@/components/TrueFocus'
 
 const socialLinks = [
@@ -48,7 +47,7 @@ function App() {
         </div>
 
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-6 pb-20 pt-20 md:px-10 md:pt-24">
-          <DecayCard width={280} height={360} image="/ppanzziri.png" />
+          <DecayCard width={288} height={360} image="/ppanzziri.png" />
 
           <div className="mt-10 flex w-full flex-col items-center text-center">
             <GlitchText
@@ -112,16 +111,10 @@ function App() {
                   className="text-xs font-semibold tracking-[0.26em] text-cyan-100"
                   speed={2.5}
                 />
-                <TextType
-                  as="h2"
-                  text="뺀질이의 일상이 궁금하다면?"
-                  className="mt-3 whitespace-nowrap text-[clamp(1.6rem,4.8vw,3.3rem)] font-black leading-tight text-white"
-                  typingSpeed={30}
-                  deletingSpeed={20}
-                  pauseDuration={3800}
-                  showCursor={false}
-                  loop={false}
-                />
+                <h2 className="mt-3 text-[clamp(1.6rem,4.8vw,3.3rem)] font-black leading-tight text-white">
+                  <span className="block">뺀질이의 일상이</span>
+                  <span className="block">궁금하다면?</span>
+                </h2>
               </div>
 
               <div className="grid gap-4">
